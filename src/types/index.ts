@@ -1,4 +1,27 @@
 import type React from "react"
+
+// Camera Types
+export interface CameraPhoto {
+  webPath: string;
+  format: string;
+  saved: boolean;
+}
+
+// Notifications
+export interface Notification {
+  id: string;
+  title: string;
+  message: string;
+  type: 'points' | 'promotion' | 'event' | 'system' | 'receipt_update';
+  timestamp: string;
+  isRead: boolean;
+  actionData?: {
+    type: 'navigate' | 'external_link';
+    target: string;
+  };
+  imageUrl?: string;
+}
+
 // User Authentication & Profile
 export interface CustomerProfile {
   cif: string
@@ -209,4 +232,11 @@ export interface CategoryCardProps {
 export interface TierBadgeProps {
   tier: CustomerProfile["memberTier"]
   size?: "sm" | "md" | "lg"
+}
+
+export interface NotificationItemProps {
+  notification: Notification
+  onPress: (notificationId: string) => void
+  onMarkAsRead: (notificationId: string) => void
+  onDelete?: (notificationId: string) => void
 }

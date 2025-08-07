@@ -1,9 +1,8 @@
-import { useState } from "react"
 import { Camera, CameraResultType, CameraSource } from "@capacitor/camera"
 import type { CameraPhoto } from "@/types"
 
 export function useCamera() {
-  const [isSupported, setIsSupported] = useState(true)
+  const isSupported = true
 
   const takePhoto = async (): Promise<CameraPhoto> => {
     try {

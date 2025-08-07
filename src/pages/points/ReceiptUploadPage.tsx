@@ -3,13 +3,13 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Camera, Upload, X, Check, AlertCircle } from 'lucide-react'
 import { useCamera } from "@/hooks/useCamera"
-import { useAuth } from "@/hooks/useAuth"
+// import { useAuth } from "@/hooks/useAuth"
 import ReceiptUploadForm from "@/components/forms/ReceiptUploadForm"
 import ReceiptPreview from "@/components/business/ReceiptPreview"
 import type { CameraPhoto } from "@/types"
 
 export default function ReceiptUploadPage() {
-  const { user } = useAuth()
+ // const { user } = useAuth()
   const { takePhoto, isSupported } = useCamera()
   const [capturedPhoto, setCapturedPhoto] = useState<CameraPhoto | null>(null)
   const [uploadStatus, setUploadStatus] = useState<'idle' | 'uploading' | 'success' | 'error'>('idle')

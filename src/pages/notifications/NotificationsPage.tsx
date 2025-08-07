@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Bell, Gift, Star, Calendar, Settings, Check, Trash2 } from 'lucide-react'
+import { Bell, Settings, Check } from 'lucide-react'
 import NotificationItem from "@/components/business/NotificationItem"
 import type { Notification } from "@/types"
 

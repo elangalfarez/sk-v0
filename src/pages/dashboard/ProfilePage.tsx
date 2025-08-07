@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { User, Settings, History, LogOut, Edit, Crown, TrendingUp, Gift, Calendar, Phone, Mail, MapPin } from 'lucide-react'
+import { User, Settings, History, LogOut, Edit, Crown, Calendar, Phone, Mail, MapPin } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth"
 import { useQuery } from "@tanstack/react-query"
 import { MultiApiService } from "@/services/MultiApiService"
