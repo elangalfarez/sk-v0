@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-const defaultConfig = require("shadcn/ui/tailwind.config")
-
-module.exports = {
-  ...defaultConfig,
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "*.{js,ts,jsx,tsx,mdx}"],
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    ...defaultConfig.theme,
     extend: {
-      ...defaultConfig.theme.extend,
       colors: {
-        ...defaultConfig.theme.extend.colors,
         // Supermal Karawaci Brand Colors
         primary: "#121421",
         secondary: "#D4AF37",
@@ -30,6 +27,9 @@ module.exports = {
         surface: "#1F2937",
         "surface-light": "#F8FAFC",
         "surface-elevated": "#2A2F3A",
+
+        // Border color (for CSS compatibility)
+        border: "#374151",
 
         // Text colors
         text: {
@@ -127,9 +127,7 @@ module.exports = {
     },
   },
   plugins: [
-    ...defaultConfig.plugins,
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
-    require("tailwindcss-animate"),
   ],
 }
