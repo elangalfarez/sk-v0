@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
-import { Crown, ArrowLeft, Eye, EyeOff } from 'lucide-react'
+import { Crown, ArrowLeft } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth"
 import LoginForm from "@/components/forms/LoginForm"
 
